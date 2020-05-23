@@ -86,7 +86,7 @@ NdevNextcloudDirectoryParserTestCase >> testDirectoryParser [
 	| myNextcloudDirectoryParser mySourceDirectoryName myDestinationDirectoryName aDirectoryCollection
 	  aFileCollection |
 
-	mySourceDirectoryName := 'D:\bibliothek fertl'.
+	mySourceDirectoryName := 'D:\library'.
 	mySourceDirectoryName := 'C:\Temp\NeuroLibrary'.
 	mySourceDirectoryName := 'C:\Temp\my local library'.
 	myDestinationDirectoryName := 'NeuroLibrary'.

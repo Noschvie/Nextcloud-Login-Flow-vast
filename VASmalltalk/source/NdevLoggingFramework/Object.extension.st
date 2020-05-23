@@ -64,9 +64,25 @@ Object class >> logMessage: aStringOrBlock class: aClass shouldLog: aBlock [
 
 	shouldLog
 		ifTrue: [
-			(Smalltalk at: #TmcsApplicationLoggerAgent ifAbsent: [ nil. ]) ifNotNil: [ :anApplicationLoggerAgent |
-				anApplicationLoggerAgent logMessage: (self buildCompleteMessageStringFor: msg class: aClass).
-			].
+			| aTimestamp aWriteStream |
+
+			aTimestamp := AbtTimestamp now.
+
+			aWriteStream := WriteStream on: String new.
+			aWriteStream cr.
+			(LCTime new
+				dtFmt: '%d.%m.%Y %H:%M:%S.%_';
+				dFmt: '%d.%m.%Y';
+				tFmt: '%H:%M:%S.%_';
+				yourself)
+					printDate: aTimestamp date
+					time: aTimestamp time
+					on: aWriteStream.
+			aWriteStream space.
+
+			aWriteStream nextPutAll: msg.
+
+			Transcript show: aWriteStream contents.
 		].
 ]
 
