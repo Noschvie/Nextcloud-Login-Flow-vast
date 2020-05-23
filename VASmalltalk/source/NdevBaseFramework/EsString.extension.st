@@ -56,7 +56,7 @@ EsString >> bindWithHexArguments: anArrayOfArguments [
 				"In-line the conversion for speed"
 				aChar isDigit
 					ifTrue: [ argNumber := aChar value - $0 value. ]
-					ifFalse: [ argNumber := aChar asUppercase value - $A value + TmcsConstants::CONST_10. ].
+					ifFalse: [ argNumber := aChar asUppercase value - $A value + 10. ].
 
 				argNumber > 0
 					ifTrue: [

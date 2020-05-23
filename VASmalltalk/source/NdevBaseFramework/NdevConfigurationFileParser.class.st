@@ -4,9 +4,6 @@ Class {
 	#instVars : [
 		'iniDic'
 	],
-	#pools : [
-		'TmcsConstants'
-	],
 	#category : 'NdevBaseFramework'
 }
 
@@ -129,10 +126,10 @@ NdevConfigurationFileParser >> parseLine: aString [
 	])
 		and: [
 			| isIncludeDirective |
-			isIncludeDirective := myLineTokens size = CONST_2 and: [ myLineTokens first = '#include'. ].
+			isIncludeDirective := myLineTokens size = 2 and: [ myLineTokens first = '#include'. ].
 
 			isIncludeDirective
-				ifTrue: [ self doReadEntriesWithFileNamed: (myLineTokens at: CONST_2). ]
+				ifTrue: [ self doReadEntriesWithFileNamed: (myLineTokens at: 2). ]
 				ifFalse: [ self parseEntry: aString. ].
 		].
 ]

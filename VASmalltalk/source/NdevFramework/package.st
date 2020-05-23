@@ -1,6 +1,6 @@
 Package {
 	#name : 'NdevFramework',
-	#vaPrerequisites : ['AbtRecordStructureBaseApp','AbtXmlSerializationApp','SstHttpsServerSupport'],
+	#vaPrerequisites : ['NdevApplicationFramework','SstHttpsServerSupport'],
 	#vaSubApplications : [
 	{
 		#condition : 'true',

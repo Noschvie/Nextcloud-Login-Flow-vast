@@ -1,6 +1,6 @@
 Package {
 	#name : 'NdevUnitTestFramework',
-	#vaPrerequisites : ['EsIpHelper','NdevFramework','SUnit'],
+	#vaPrerequisites : ['NdevFramework','SUnit'],
 	#vaSubApplications : [
 	{
 		#condition : 'true',

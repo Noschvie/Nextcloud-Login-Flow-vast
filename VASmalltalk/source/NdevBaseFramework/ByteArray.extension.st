@@ -37,7 +37,7 @@ ByteArray >> asHexString [
 	s := WriteStream on: String new.
 
 	s nextPut: $[.
-	self do: [ :byte | byte printOn: s base: TmcsConstants::CONST_16 showRadix: false. ] separatedBy: [
+	self do: [ :byte | byte printOn: s base: 16 showRadix: false. ] separatedBy: [
 		s space.
 	].
 	s nextPut: $].
