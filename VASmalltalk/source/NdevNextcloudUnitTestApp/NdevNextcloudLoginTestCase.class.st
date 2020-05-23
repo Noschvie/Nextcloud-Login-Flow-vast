@@ -11,7 +11,7 @@ NdevNextcloudLoginTestCase >> testLogin [
 	| myAgent myResult |
 
 
-	myAgent := NextcloudLoginFlowAgent withUrl: 'https://nextcloud.neunzehn.at' username: 'norbert'.
+	myAgent := NextcloudLoginFlowAgent withUrl: 'https://nextcloud.myDomain.at' username: 'myUsername'.
 	self assert: (myAgent notNil).
 
 	myResult := myAgent performLogin.
